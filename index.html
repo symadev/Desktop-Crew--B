@@ -8,66 +8,76 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles/styles.css">
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-
-
-        
     </style>
 </head>
-<body class="hero min-h-screen"
-style="background-image: url('images/background.jpg');" >
-    
-
+<body class="hero min-h-screen" style="background-image: url('images/background.jpg');">
     <main>
-        <div class="hero min-h-screen bg-cover bg-center">
-            
-            <!-- Responsive Navbar -->
-            <nav class="absolute top-0 left-0 w-full h-20">
-                <div class="navbar text-white h-full flex justify-between items-center">
-                    <div class="flex-1">
-                        <a class="text-xl font-bold"><img src="images/favicon-32x32.png" alt="Sample Image" style="width: 50px; height: 50px;" ></a>
-                    </div>
-                   
-                    <div class="hidden md:flex">
-                        <ul class="menu menu-horizontal px-2 bg-white bg-opacity-10 flex items-center gap-x-7">
-                            <li><a> <span class="font-bold">00</span> Home</a></li>
-                            <li><a> <span class="font-bold">01</span> Destination</a></li>
-                            <li><a> <span class="font-bold">02</span> Crew</a></li>
-                            <li><a> <span class="font-bold">03</span> Technology</a></li>
-                        </ul>
-                    </div>
-                    <div class="md:hidden">
-                        <button id="menu-btn" class="text-white text-2xl">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                    </div>
+        <nav class="absolute top-0 left-0 w-full h-20">
+            <div class="navbar text-white h-full flex justify-between items-center px-4">
+                <div class="flex-1">
+                    <a class="text-xl font-bold">
+                        <img src="images/favicon-32x32.png" alt="Logo" style="width: 50px; height: 50px;">
+                    </a>
                 </div>
-
-                <!-- Mobile Menu -->
-                <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-black bg-opacity-90 text-white">
-                    <ul class="flex flex-col items-center py-4 space-y-4">
-                        <li><a href="#">00 Home</a></li>
-                        <li><a href="#">01 Destination</a></li>
-                        <li><a href="#">02 Crew</a></li>
-                        <li><a href="#">03 Technology</a></li>
+                <div class="hidden md:flex">
+                    <ul class="menu menu-horizontal px-2 bg-white bg-opacity-10 flex items-center gap-x-7">
+                        <li><a><span class="font-bold">00</span> Home</a></li>
+                        <li><a><span class="font-bold">01</span> Destination</a></li>
+                        <li><a><span class="font-bold">02</span> Crew</a></li>
+                        <li><a><span class="font-bold">03</span> Technology</a></li>
                     </ul>
                 </div>
-            </nav>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-black bg-opacity-90 text-white">
+                <ul class="flex flex-col items-center py-4 space-y-4">
+                    <li><a href="#">00 Home</a></li>
+                    <li><a href="#">01 Destination</a></li>
+                    <li><a href="#">02 Crew</a></li>
+                    <li><a href="#">03 Technology</a></li>
+                </ul>
+            </div>
+        </nav>
 
+        <!-- Main Section -->
+        <div class="hero min-h-screen flex items-center justify-center">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <img src="images/image-mark-shuttleworth.png" alt="Mark Shuttleworth" class="max-w-4xl rounded-lg">
+                <div class="p-10 m-10 text-white">
+                    <h2 class="text-2xl font-thin">MISSION SPECIALIST</h2>
+                    <h1 class="text-7xl font-light">MARK SHUTTLEWORTH</h1>
+                    <p class="py-6 gap-2 text-xl font-thin">
+                        Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system.
+                        Shuttleworth became the first South African to travel to space as a space tourist.
+                    </p>
+                    <div class="flex gap-2">
+                        <div class="badge badge-primary badge-xs"></div>
+                        <div class="badge badge-primary badge-xs"></div>
+                        <div class="badge badge-primary badge-xs"></div>
+                        <div class="badge badge-primary badge-xs"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-
-
-
-
-    
-    
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
 </body>
 </html>
